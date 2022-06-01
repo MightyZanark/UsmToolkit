@@ -212,7 +212,8 @@ namespace VGMToolbox.format
 
                 workingFile = FileUtil.RemoveChunkFromFile(sourceFileName, footerOffset, footerSize);
                 destinationFileName = Path.ChangeExtension(sourceFileName, fileExtension);
-                destinationFileName = destinationFileName.Substring(0, destinationFileName.LastIndexOf("_"))+fileExtension;
+                // destinationFileName = destinationFileName.Substring(0, destinationFileName.LastIndexOf("_"))+fileExtension;
+
                 File.Copy(workingFile, destinationFileName, true);                
                 File.Delete(workingFile);
 

@@ -1,4 +1,14 @@
-# UsmToolkit
+# Changes I made
+
+1. Made it so you can put the UsmToolkit folder on PATH and it will work anywhere, instead of needing to be in the UsmToolkit folder to use the tool.
+2. Changed how the extracted .usm files are handled. Before, if a .usm file has multiple audio extracted, only the newest one will stay. Now, all the files will stay and get converted.
+3. Made it so the original .usm file is also deleted after conversion.
+4. Removed the need of vgmstream as FFmpeg can handle .adx audio files again and updated the ffmpeg download link in `deps.json`.
+5. Removed Video and Audio parameters in `config.json`, as it didn't really work for me and made my output worse. The original config will be in `og-config.json`.
+
+
+
+# UsmToolkit - Original Description
 
 Tool to convert USM video files into user-friendly formats.
 
