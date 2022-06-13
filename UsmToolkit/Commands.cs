@@ -142,8 +142,11 @@ namespace UsmToolkit
                     File.Delete(tempVideo);
 
                 //Deletes temp audio files created after usm extraction
-                foreach (var tempAudio in Directory.GetFiles(tempFilePath, $"{pureFileName}*{usmStream.FinalAudioExtension}"))
+                if (usmStream.HasAudio)
+                {
+                    foreach (var tempAudio in Directory.GetFiles(tempFilePath, $"{pureFileName}*{usmStream.FinalAudioExtension}"))
                     File.Delete(tempAudio);
+                }
 
                 //Deletes the source .usm file
                 File.Delete(usmStream.FilePath);
