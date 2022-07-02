@@ -168,7 +168,7 @@ namespace UsmToolkit
             string ffmpegZipPath = Path.Combine(AppContext.BaseDirectory, "ffmpeg.zip");
             string ffmpegExePath = Path.Combine(AppContext.BaseDirectory, "ffmpeg.exe");
             Console.WriteLine($"Downloading FFmpeg from {conf.FFmpeg}\nThis action may take a while");
-            //client.DownloadFile(conf.FFmpeg, ffmpegZipPath);
+            client.DownloadFile(conf.FFmpeg, ffmpegZipPath);
 
             Console.WriteLine($"Extracting ffmpeg...");
             using (ZipArchive archive = ZipFile.OpenRead(ffmpegZipPath))
